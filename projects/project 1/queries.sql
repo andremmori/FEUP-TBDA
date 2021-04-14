@@ -41,10 +41,10 @@ WHERE activity IS NULL;
 -- 4
 SELECT q2.designation, q1.activity, q1.facilities
 FROM (SELECT activity, max(facilities) as facilities
-FROM (SELECT municipality, activity, count() as facilities
+FROM (SELECT municipality, activity, count(*) as facilities
 FROM xfacilities NATURAL JOIN xuses NATURAL JOIN xactivities
 GROUP BY municipality, activity)
-GROUP BY activity) q1 LEFT JOIN (SELECT designation, activity, count() as facilities
+GROUP BY activity) q1 LEFT JOIN (SELECT designation, activity, count(*) as facilities
 FROM xmunicipalities INNER JOIN xfacilities NATURAL JOIN xuses NATURAL JOIN xactivities
 ON xmunicipalities.cod = xfacilities.municipality
 GROUP BY designation, activity) q2

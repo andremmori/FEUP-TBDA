@@ -1,9 +1,4 @@
 -- 1
-SELECT f.id, f.name, r.description, a.activity
-FROM xfacilities f, xroomtypes r, xuses u, xactivities a
-WHERE r.description like '%touros%' and a.activity = 'teatro' and r.roomtype = f.roomtype
-    and u.id = f.id and u.ref = a.ref ;
-
 SELECT id, name, description, activity
 FROM xfacilities NATURAL JOIN xroomtypes NATURAL JOIN xuses NATURAL JOIN xactivities
 WHERE description  LIKE '%touros%' AND activity = 'teatro';
@@ -14,7 +9,7 @@ FROM xfacilities NATURAL JOIN xroomtypes INNER JOIN xmunicipalities
 ON xmunicipalities.cod = xfacilities.municipality
 INNER JOIN xregions ON xmunicipalities.region = xregions.cod
 WHERE description  LIKE '%touros%'
-GROUP BY xregions.designation
+GROUP BY xregions.designation;
 
 -- 3
 ---- a)
@@ -30,7 +25,7 @@ WHERE activity = 'cinema');
 
 ---- b)
 SELECT count(*)
-FROM xmunicipalities FULL OUTER JOIN (SELECT municipality as cod, activity
+FROM xmunicipalities LEFT OUTER JOIN (SELECT municipality as cod, activity
 FROM xfacilities NATURAL JOIN xuses NATURAL JOIN xactivities
 INNER JOIN
 xmunicipalities ON xmunicipalities.cod = xfacilities.municipality
@@ -57,13 +52,13 @@ FROM zfacilities NATURAL JOIN zroomtypes INNER JOIN zmunicipalities On
 zmunicipalities.cod = zfacilities.municipality INNER JOIN zdistricts ON
 zdistricts.cod = zmunicipalities.district
 WHERE zdistricts.designation = 'Porto' AND zroomtypes.description  LIKE '%touros%';
+/*
+Add on question 5 a)
+CREATE INDEX INDEX_B_TREE ON ZFACILITIES (ROOMTYPE , MUNICIPALITY );
 
----- a)
-CREATE INDEX INDEX_B_TREE ON ZFACILITIES (ROOMTYPE ASC, MUNICIPALITY ASC);
-
----- b)
-CREATE INDEX BITMAP ON ZFACILITIES (ROOMTYPE ASC, MUNICIPALITY ASC);
-
+Add on question 5 a) b)
+CREATE BITMAP INDEX INDEX_BITMAP ON ZFACILITIES (ROOMTYPE, MUNICIPALITY);
+*/
 
 -- 6
 SELECT designation,cod FROM xdistricts WHERE cod NOT IN

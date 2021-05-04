@@ -4,13 +4,22 @@ DROP TABLE "FACILITIES" CASCADE CONSTRAINTS;
 DROP TABLE "MUNICIPALITIES" CASCADE CONSTRAINTS;
 DROP TABLE "REGIONS" CASCADE CONSTRAINTS;
 DROP TABLE "ROOMTYPES" CASCADE CONSTRAINTS;
-DROP TABLE "USES" CASCADE CONSTRAINTS;
 
 ----------------------------
 
 ------- Type Creation ------
 
 ----------------------------
+DROP TYPE region_t FORCE;
+DROP TYPE district_t FORCE;
+DROP TYPE districtsref_tab_t FORCE;
+DROP TYPE municipality_t FORCE;
+DROP TYPE municipalitiesref_tab_t FORCE;
+DROP TYPE roomtype_t FORCE;
+DROP TYPE facility_t FORCE;
+DROP TYPE facilitiesref_tab_t FORCE;
+DROP TYPE activity_t FORCE;
+DROP TYPE activitiesref_tab_t FORCE;
 
 CREATE OR REPLACE TYPE region_t AS OBJECT (
     cod NUMBER(4, 0),
@@ -104,3 +113,36 @@ CREATE TABLE facilities OF facility_t
 
 CREATE TABLE activities OF activity_t
     NESTED TABLE facilities STORE AS activity_facilities;
+
+
+------------------------
+
+------ FUNCTION --------
+
+------------------------
+ALTER TYPE activity_t
+ADD MEMBER FUNCTION isActivity(word STRING) RETURN STRING CASCADE;
+ALTER TYPE roomtype_t
+ADD MEMBER FUNCTION descriptionContains(word STRING) RETURN STRING CASCADE;
+
+CREATE OR REPLACE TYPE BODY activity_t AS
+    MEMBER FUNCTION isActivity(word STRING) RETURN STRING IS
+    BEGIN
+        IF activity = word THEN
+            RETURN 'TRUE';
+        ELSE
+            RETURN 'FALSE';
+        END IF;
+    END isActivity;
+END;
+
+CREATE OR REPLACE TYPE BODY roomtype_t AS
+    MEMBER FUNCTION descriptionContains(word STRING) RETURN STRING IS
+    BEGIN
+        IF description LIKE '%' || word || '%' THEN
+            RETURN 'TRUE';
+        ELSE
+            RETURN 'FALSE';
+        END IF;
+    END descriptionContains;
+END;

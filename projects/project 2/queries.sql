@@ -75,3 +75,14 @@ WHERE cod NOT IN
         FROM districts d, TABLE(d.municipalities) m, TABLE(VALUE(m).facilities) f
     )
 ) ORDER BY cod;
+
+---- 5 with functions
+SELECT cod, designation
+FROM districts
+WHERE cod NOT IN
+(
+    SELECT DISTINCT d.cod
+    FROM districts d, TABLE(d.municipalities) m
+    WHERE m.totalFacilities() = 0
+) ORDER BY cod;
+

@@ -20,6 +20,7 @@ DROP TYPE facility_t FORCE;
 DROP TYPE facilitiesref_tab_t FORCE;
 DROP TYPE activity_t FORCE;
 DROP TYPE activitiesref_tab_t FORCE;
+
 CREATE OR REPLACE TYPE region_t AS OBJECT (
     cod NUMBER(4, 0),
     designation	VARCHAR2(50 BYTE),
@@ -30,8 +31,7 @@ CREATE OR REPLACE TYPE district_t AS OBJECT
 (
     cod	NUMBER(4,0),
     designation	VARCHAR2(50 BYTE),
-    region REF region_t,
-    MEMBER FUNCTION facilitiesInAllMunicipalities RETURN NUMBER
+    region REF region_t
 )
 /
 CREATE OR REPLACE TYPE districtsref_tab_t AS TABLE OF REF district_t
@@ -42,8 +42,8 @@ CREATE OR REPLACE TYPE municipality_t AS OBJECT
     designation	VARCHAR2(50 BYTE),
     district REF district_t,
     region REF region_t,
-    MEMBER FUNCTION municipalityHasActivity(word STRING) RETURN NUMBER
-
+    MEMBER FUNCTION municipalityHasActivity(word STRING) RETURN INTEGER,
+    MEMBER FUNCTION totalFacilities RETURN INTEGER
 )
 /
 CREATE OR REPLACE TYPE municipalitiesref_tab_t AS TABLE OF REF municipality_t
@@ -149,7 +149,7 @@ CREATE OR REPLACE TYPE BODY roomtype_t AS
 END;
 
 CREATE OR REPLACE TYPE BODY municipality_t AS
-    MEMBER FUNCTION municipalityHasActivity(word STRING) RETURN NUMBER IS
+    MEMBER FUNCTION municipalityHasActivity(word STRING) RETURN INTEGER IS
     activityCount INTEGER;
 
     BEGIN
@@ -160,25 +160,16 @@ CREATE OR REPLACE TYPE BODY municipality_t AS
         RETURN activityCount;
 
     END municipalityHasActivity;
-END;
 
-CREATE OR REPLACE TYPE BODY district_t AS
-    MEMBER FUNCTION  facilitiesInAllMunicipalities RETURN NUMBER IS
-    hasFacilities INTEGER;
+
+    MEMBER FUNCTION totalFacilities RETURN INTEGER IS
+    nFacilities INTEGER;
 
     BEGIN
+        SELECT COUNT(*) INTO nFacilities
+        FROM municipalities m, TABLE(m.facilities) f
+        WHERE SELF.cod = m.cod;
 
-    SELECT COUNT(*) INTO hasFacilities FROM districts WHERE cod NOT IN
-    (
-        SELECT DISTINCT d.cod
-        FROM districts d, TABLE(d.municipalities) m
-        WHERE (d.cod, VALUE(m).cod) NOT IN
-        (
-            SELECT d.cod, VALUE(m).cod
-            FROM districts d, TABLE(d.municipalities) m, TABLE(VALUE(m).facilities) f
-        )
-    );
-    RETURN hasFacilities;
-
-    END facilitiesInAllMunicipalities;
+        RETURN nFacilities;
+    END totalFacilities;
 END;

@@ -20,38 +20,41 @@ DROP TYPE facility_t FORCE;
 DROP TYPE facilitiesref_tab_t FORCE;
 DROP TYPE activity_t FORCE;
 DROP TYPE activitiesref_tab_t FORCE;
-
 CREATE OR REPLACE TYPE region_t AS OBJECT (
     cod NUMBER(4, 0),
     designation	VARCHAR2(50 BYTE),
     nut1 VARCHAR2(50 BYTE)
-);
-
+)
+/
 CREATE OR REPLACE TYPE district_t AS OBJECT
 (
     cod	NUMBER(4,0),
     designation	VARCHAR2(50 BYTE),
-    region REF region_t
-);
-
-CREATE OR REPLACE TYPE districtsref_tab_t AS TABLE OF REF district_t;
-
+    region REF region_t,
+    MEMBER FUNCTION facilitiesInAllMunicipalities RETURN NUMBER
+)
+/
+CREATE OR REPLACE TYPE districtsref_tab_t AS TABLE OF REF district_t
+/
 CREATE OR REPLACE TYPE municipality_t AS OBJECT
 (
     cod	NUMBER(4,0),
     designation	VARCHAR2(50 BYTE),
     district REF district_t,
-    region REF region_t
-);
+    region REF region_t,
+    MEMBER FUNCTION municipalityHasActivity(word STRING) RETURN NUMBER
 
-CREATE OR REPLACE TYPE municipalitiesref_tab_t AS TABLE OF REF municipality_t;
-
+)
+/
+CREATE OR REPLACE TYPE municipalitiesref_tab_t AS TABLE OF REF municipality_t
+/
 CREATE OR REPLACE TYPE roomtype_t AS OBJECT
 (
     roomtype NUMBER(4,0),
-    description VARCHAR2(50 BYTE)
-);
-
+    description VARCHAR2(50 BYTE),
+    MEMBER FUNCTION descriptionContains(word STRING) RETURN STRING
+)
+/
 CREATE OR REPLACE TYPE facility_t AS OBJECT
 (
     id NUMBER(4,0),
@@ -60,17 +63,19 @@ CREATE OR REPLACE TYPE facility_t AS OBJECT
     roomtype REF roomtype_t,
     address VARCHAR2(80),
     municipality REF municipality_t
-);
-
-CREATE OR REPLACE TYPE facilitiesref_tab_t AS TABLE OF REF facility_t;
-
+)
+/
+CREATE OR REPLACE TYPE facilitiesref_tab_t AS TABLE OF REF facility_t
+/
 CREATE OR REPLACE TYPE activity_t AS OBJECT
 (
     ref VARCHAR2(20),
-    activity VARCHAR2(20)
-);
-
-CREATE OR REPLACE TYPE activitiesref_tab_t AS TABLE OF REF activity_t;
+    activity VARCHAR2(20),
+    MEMBER FUNCTION isActivity(word STRING) RETURN STRING
+)
+/
+CREATE OR REPLACE TYPE activitiesref_tab_t AS TABLE OF REF activity_t
+/
 
 ALTER TYPE region_t
 ADD ATTRIBUTE (districts districtsref_tab_t) CASCADE;
@@ -120,10 +125,6 @@ CREATE TABLE activities OF activity_t
 ------ FUNCTION --------
 
 ------------------------
-ALTER TYPE activity_t
-ADD MEMBER FUNCTION isActivity(word STRING) RETURN STRING CASCADE;
-ALTER TYPE roomtype_t
-ADD MEMBER FUNCTION descriptionContains(word STRING) RETURN STRING CASCADE;
 
 CREATE OR REPLACE TYPE BODY activity_t AS
     MEMBER FUNCTION isActivity(word STRING) RETURN STRING IS
@@ -145,4 +146,39 @@ CREATE OR REPLACE TYPE BODY roomtype_t AS
             RETURN 'FALSE';
         END IF;
     END descriptionContains;
+END;
+
+CREATE OR REPLACE TYPE BODY municipality_t AS
+    MEMBER FUNCTION municipalityHasActivity(word STRING) RETURN NUMBER IS
+    activityCount INTEGER;
+
+    BEGIN
+        SELECT COUNT(*) INTO activityCount
+        FROM TABLE(facilities) f, TABLE(VALUE(f).activities) a
+        WHERE VALUE(a).isActivity(word) = 'TRUE';
+
+        RETURN activityCount;
+
+    END municipalityHasActivity;
+END;
+
+CREATE OR REPLACE TYPE BODY district_t AS
+    MEMBER FUNCTION  facilitiesInAllMunicipalities RETURN NUMBER IS
+    hasFacilities INTEGER;
+
+    BEGIN
+
+    SELECT COUNT(*) INTO hasFacilities FROM districts WHERE cod NOT IN
+    (
+        SELECT DISTINCT d.cod
+        FROM districts d, TABLE(d.municipalities) m
+        WHERE (d.cod, VALUE(m).cod) NOT IN
+        (
+            SELECT d.cod, VALUE(m).cod
+            FROM districts d, TABLE(d.municipalities) m, TABLE(VALUE(m).facilities) f
+        )
+    );
+    RETURN hasFacilities;
+
+    END facilitiesInAllMunicipalities;
 END;

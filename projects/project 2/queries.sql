@@ -42,6 +42,9 @@ WHERE m.cod NOT IN
     WHERE VALUE(a).activity = 'cinema'
 );
 
+---- 3 with functions
+SELECT COUNT(m.cod) FROM municipalities m WHERE m.municipalityHasActivity('cinema') = 0;
+
 -- 4
 SELECT t1.*
 FROM

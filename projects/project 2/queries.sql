@@ -86,3 +86,7 @@ WHERE cod NOT IN
     WHERE m.totalFacilities() = 0
 ) ORDER BY cod;
 
+-- 6 (Untested)
+SELECT r.designation, r.totalFacilities() as  totalFacilities
+FROM regions r
+ORDER BY totalFacilities DESC;

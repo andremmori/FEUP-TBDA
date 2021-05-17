@@ -173,3 +173,23 @@ CREATE OR REPLACE TYPE BODY municipality_t AS
         RETURN nFacilities;
     END totalFacilities;
 END;
+
+
+--------------
+-- Untested --
+--------------
+alter type region_t
+add member function totalFacilities return integer cascade;
+
+CREATE OR REPLACE TYPE BODY region_t AS
+    MEMBER FUNCTION totalFacilities RETURN INTEGER IS
+    totalFacilities INTEGER;
+
+    BEGIN
+        SELECT SUM(m.totalFacilities()) INTO totalFacilities
+        FROM municipalities m
+        WHERE m.region.cod = self.cod;
+
+        RETURN totalFacilities;
+    END totalFacilities;
+END;

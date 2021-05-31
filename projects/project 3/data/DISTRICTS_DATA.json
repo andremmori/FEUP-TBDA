@@ -1,0 +1,122 @@
+{
+  "results" : [
+    {
+      "columns" : [
+        {
+          "name" : "COD",
+          "type" : "NUMBER"
+        },
+        {
+          "name" : "DESIGNATION",
+          "type" : "VARCHAR2"
+        },
+        {
+          "name" : "REGION",
+          "type" : "NUMBER"
+        }
+      ],
+      "items" : [
+        {
+          "cod" : 1,
+          "designation" : "Aveiro",
+          "region" : ""
+        },
+        {
+          "cod" : 2,
+          "designation" : "Beja",
+          "region" : 4
+        },
+        {
+          "cod" : 3,
+          "designation" : "Braga",
+          "region" : 1
+        },
+        {
+          "cod" : 4,
+          "designation" : "Bragança",
+          "region" : 1
+        },
+        {
+          "cod" : 5,
+          "designation" : "Castelo Branco",
+          "region" : 2
+        },
+        {
+          "cod" : 6,
+          "designation" : "Coimbra",
+          "region" : 2
+        },
+        {
+          "cod" : 7,
+          "designation" : "Évora",
+          "region" : 4
+        },
+        {
+          "cod" : 8,
+          "designation" : "Faro",
+          "region" : 5
+        },
+        {
+          "cod" : 9,
+          "designation" : "Guarda",
+          "region" : ""
+        },
+        {
+          "cod" : 10,
+          "designation" : "Leiria",
+          "region" : 2
+        },
+        {
+          "cod" : 11,
+          "designation" : "Lisboa",
+          "region" : ""
+        },
+        {
+          "cod" : 12,
+          "designation" : "Portalegre",
+          "region" : 4
+        },
+        {
+          "cod" : 13,
+          "designation" : "Porto",
+          "region" : 1
+        },
+        {
+          "cod" : 14,
+          "designation" : "Santarém",
+          "region" : ""
+        },
+        {
+          "cod" : 15,
+          "designation" : "Setúbal",
+          "region" : ""
+        },
+        {
+          "cod" : 16,
+          "designation" : "Viana do Castelo",
+          "region" : 1
+        },
+        {
+          "cod" : 17,
+          "designation" : "Vila Real",
+          "region" : 1
+        },
+        {
+          "cod" : 18,
+          "designation" : "Viseu",
+          "region" : ""
+        },
+        {
+          "cod" : 40,
+          "designation" : "Açores",
+          "region" : 6
+        },
+        {
+          "cod" : 30,
+          "designation" : "Madeira",
+          "region" : 7
+        }
+      ]
+    }
+  ]
+}

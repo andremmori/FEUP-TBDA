@@ -1,0 +1,57 @@
+{
+  "results" : [
+    {
+      "columns" : [
+        {
+          "name" : "COD",
+          "type" : "NUMBER"
+        },
+        {
+          "name" : "DESIGNATION",
+          "type" : "VARCHAR2"
+        },
+        {
+          "name" : "NUT1",
+          "type" : "VARCHAR2"
+        }
+      ],
+      "items" : [
+        {
+          "cod" : 1,
+          "designation" : "Norte",
+          "nut1" : "Continente"
+        },
+        {
+          "cod" : 2,
+          "designation" : "Centro",
+          "nut1" : "Continente"
+        },
+        {
+          "cod" : 3,
+          "designation" : "Lisboa",
+          "nut1" : "Continente"
+        },
+        {
+          "cod" : 4,
+          "designation" : "Alentejo",
+          "nut1" : "Continente"
+        },
+        {
+          "cod" : 5,
+          "designation" : "Algarve",
+          "nut1" : "Continente"
+        },
+        {
+          "cod" : 6,
+          "designation" : "Açores",
+          "nut1" : "Açores"
+        },
+        {
+          "cod" : 7,
+          "designation" : "Madeira",
+          "nut1" : "Madeira"
+        }
+      ]
+    }
+  ]
+}

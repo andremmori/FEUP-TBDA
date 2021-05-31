@@ -1,0 +1,42 @@
+{
+  "results" : [
+    {
+      "columns" : [
+        {
+          "name" : "REF",
+          "type" : "VARCHAR2"
+        },
+        {
+          "name" : "ACTIVITY",
+          "type" : "VARCHAR2"
+        }
+      ],
+      "items" : [
+        {
+          "ref" : "1",
+          "activity" : "cinema"
+        },
+        {
+          "ref" : "2",
+          "activity" : "circo"
+        },
+        {
+          "ref" : "3",
+          "activity" : "dança"
+        },
+        {
+          "ref" : "4",
+          "activity" : "música"
+        },
+        {
+          "ref" : "5",
+          "activity" : "tauromaquia"
+        },
+        {
+          "ref" : "6",
+          "activity" : "teatro"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1874 @@
+{
+  "results" : [
+    {
+      "columns" : [
+        {
+          "name" : "COD",
+          "type" : "NUMBER"
+        },
+        {
+          "name" : "DESIGNATION",
+          "type" : "VARCHAR2"
+        },
+        {
+          "name" : "DISTRICT",
+          "type" : "NUMBER"
+        },
+        {
+          "name" : "REGION",
+          "type" : "NUMBER"
+        }
+      ],
+      "items" : [
+        {
+          "cod" : 101,
+          "designation" : "Águeda",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 102,
+          "designation" : "Albergaria-a-Velha",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 103,
+          "designation" : "Anadia",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 104,
+          "designation" : "Arouca",
+          "district" : 1,
+          "region" : 1
+        },
+        {
+          "cod" : 105,
+          "designation" : "Aveiro",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 106,
+          "designation" : "Castelo de Paiva",
+          "district" : 1,
+          "region" : 1
+        },
+        {
+          "cod" : 107,
+          "designation" : "Espinho",
+          "district" : 1,
+          "region" : 1
+        },
+        {
+          "cod" : 108,
+          "designation" : "Estarreja",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 109,
+          "designation" : "Santa Maria da Feira",
+          "district" : 1,
+          "region" : 1
+        },
+        {
+          "cod" : 110,
+          "designation" : "Ílhavo",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 111,
+          "designation" : "Mealhada",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 112,
+          "designation" : "Murtosa",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 113,
+          "designation" : "Oliveira de Azemeis",
+          "district" : 1,
+          "region" : 1
+        },
+        {
+          "cod" : 114,
+          "designation" : "Oliveira do Bairro",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 115,
+          "designation" : "Ovar",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 116,
+          "designation" : "São João da Madeira",
+          "district" : 1,
+          "region" : 1
+        },
+        {
+          "cod" : 117,
+          "designation" : "Sever do Vouga",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 118,
+          "designation" : "Vagos",
+          "district" : 1,
+          "region" : 2
+        },
+        {
+          "cod" : 119,
+          "designation" : "Vale de Cambra",
+          "district" : 1,
+          "region" : 1
+        },
+        {
+          "cod" : 201,
+          "designation" : "Aljustrel",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 202,
+          "designation" : "Almodovar",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 203,
+          "designation" : "Alvito",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 204,
+          "designation" : "Barrancos",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 205,
+          "designation" : "Beja",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 206,
+          "designation" : "Castro Verde",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 207,
+          "designation" : "Cuba",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 208,
+          "designation" : "Ferreira do Alentejo",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 209,
+          "designation" : "Mértola",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 210,
+          "designation" : "Moura",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 211,
+          "designation" : "Odemira",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 212,
+          "designation" : "Ourique",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 213,
+          "designation" : "Serpa",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 214,
+          "designation" : "Vidigueira",
+          "district" : 2,
+          "region" : 4
+        },
+        {
+          "cod" : 301,
+          "designation" : "Amares",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 302,
+          "designation" : "Barcelos",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 303,
+          "designation" : "Braga",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 304,
+          "designation" : "Cabeceiras de Basto",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 305,
+          "designation" : "Celorico de Basto",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 306,
+          "designation" : "Esposende",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 307,
+          "designation" : "Fafe",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 308,
+          "designation" : "Guimarães",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 309,
+          "designation" : "Póvoa de Lanhoso",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 310,
+          "designation" : "Terras de Bouro",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 311,
+          "designation" : "Vieira do Minho",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 312,
+          "designation" : "Vila Nova de Famalicão",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 313,
+          "designation" : "Vila Verde",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 314,
+          "designation" : "Vizela",
+          "district" : 3,
+          "region" : 1
+        },
+        {
+          "cod" : 409,
+          "designation" : "Torre de Moncorvo",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 401,
+          "designation" : "Alfandega da Fé",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 402,
+          "designation" : "Bragança",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 403,
+          "designation" : "Carrazeda de Ansiães",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 404,
+          "designation" : "Freixo Espada a Cinta",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 405,
+          "designation" : "Macedo de Cavaleiros",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 406,
+          "designation" : "Miranda do Douro",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 407,
+          "designation" : "Mirandela",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 408,
+          "designation" : "Mogadouro",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 410,
+          "designation" : "Vila Flor",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 411,
+          "designation" : "Vimioso",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 412,
+          "designation" : "Vinhais",
+          "district" : 4,
+          "region" : 1
+        },
+        {
+          "cod" : 510,
+          "designation" : "Vila de Rei",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 505,
+          "designation" : "Idanha-a-Nova",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 501,
+          "designation" : "Belmonte",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 502,
+          "designation" : "Castelo Branco",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 503,
+          "designation" : "Covilhã",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 504,
+          "designation" : "Fundão",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 506,
+          "designation" : "Oleiros",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 507,
+          "designation" : "Penamacor",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 508,
+          "designation" : "Proença-a-Nova",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 509,
+          "designation" : "Sertã",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 511,
+          "designation" : "Vila Velha de Rodão",
+          "district" : 5,
+          "region" : 2
+        },
+        {
+          "cod" : 606,
+          "designation" : "Góis",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 607,
+          "designation" : "Lousã",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 608,
+          "designation" : "Mira",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 609,
+          "designation" : "Miranda do Corvo",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 610,
+          "designation" : "Montemor-o-Velho",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 611,
+          "designation" : "Oliveira do Hospital",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 612,
+          "designation" : "Pampilhosa da Serra",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 613,
+          "designation" : "Penacova",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 614,
+          "designation" : "Penela",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 615,
+          "designation" : "Soure",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 616,
+          "designation" : "Tábua",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 617,
+          "designation" : "Vila Nova de Poiares",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 605,
+          "designation" : "Figueira da Foz",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 602,
+          "designation" : "Cantanhede",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 603,
+          "designation" : "Coimbra",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 604,
+          "designation" : "Condeixa-a-Nova",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 601,
+          "designation" : "Arganil",
+          "district" : 6,
+          "region" : 2
+        },
+        {
+          "cod" : 701,
+          "designation" : "Alandroal",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 702,
+          "designation" : "Arraiolos",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 703,
+          "designation" : "Borba",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 704,
+          "designation" : "Estremoz",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 705,
+          "designation" : "Évora",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 707,
+          "designation" : "Mora",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 708,
+          "designation" : "Mourão",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 709,
+          "designation" : "Portel",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 710,
+          "designation" : "Redondo",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 711,
+          "designation" : "Reguengos de Monsaraz",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 712,
+          "designation" : "Vendas Novas",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 706,
+          "designation" : "Montemor-o-Novo",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 713,
+          "designation" : "Viana do Alentejo",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 714,
+          "designation" : "Vila Viçosa",
+          "district" : 7,
+          "region" : 4
+        },
+        {
+          "cod" : 801,
+          "designation" : "Albufeira",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 802,
+          "designation" : "Alcoutim",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 803,
+          "designation" : "Aljezur",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 804,
+          "designation" : "Castro Marim",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 805,
+          "designation" : "Faro",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 806,
+          "designation" : "Lagoa",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 807,
+          "designation" : "Lagos",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 808,
+          "designation" : "Loulé",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 809,
+          "designation" : "Monchique",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 810,
+          "designation" : "Olhão",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 811,
+          "designation" : "Portimão",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 812,
+          "designation" : "São Brás de Alportel",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 813,
+          "designation" : "Silves",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 814,
+          "designation" : "Tavira",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 815,
+          "designation" : "Vila do Bispo",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 816,
+          "designation" : "Vila Real Sto Antonio",
+          "district" : 8,
+          "region" : 5
+        },
+        {
+          "cod" : 901,
+          "designation" : "Aguiar da Beira",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 902,
+          "designation" : "Almeida",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 903,
+          "designation" : "Celorico da Beira",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 904,
+          "designation" : "Fig. Castelo Rodrigo",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 905,
+          "designation" : "Fornos de Algodres",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 906,
+          "designation" : "Gouveia",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 907,
+          "designation" : "Guarda",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 908,
+          "designation" : "Manteigas",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 909,
+          "designation" : "Meda",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 910,
+          "designation" : "Pinhel",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 911,
+          "designation" : "Sabugal",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 912,
+          "designation" : "Seia",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 913,
+          "designation" : "Trancoso",
+          "district" : 9,
+          "region" : 2
+        },
+        {
+          "cod" : 914,
+          "designation" : "Vila Nova de Foz Coa",
+          "district" : 9,
+          "region" : 1
+        },
+        {
+          "cod" : 1003,
+          "designation" : "Ansião",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1004,
+          "designation" : "Batalha",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1005,
+          "designation" : "Bombarral",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1006,
+          "designation" : "Caldas da Rainha",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1007,
+          "designation" : "Castanheira de Pera",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1008,
+          "designation" : "Figueiró dos Vinhos",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1009,
+          "designation" : "Leiria",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1010,
+          "designation" : "Marinha Grande",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1011,
+          "designation" : "Nazaré",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1012,
+          "designation" : "Óbidos",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1014,
+          "designation" : "Peniche",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1015,
+          "designation" : "Pombal",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1016,
+          "designation" : "Porto de Mós",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1013,
+          "designation" : "Pedrogão Grande",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1001,
+          "designation" : "Alcobaça",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1002,
+          "designation" : "Alvaiázere",
+          "district" : 10,
+          "region" : 2
+        },
+        {
+          "cod" : 1101,
+          "designation" : "Alenquer",
+          "district" : 11,
+          "region" : 2
+        },
+        {
+          "cod" : 1102,
+          "designation" : "Arruda dos Vinhos",
+          "district" : 11,
+          "region" : 2
+        },
+        {
+          "cod" : 1103,
+          "designation" : "Azambuja",
+          "district" : 11,
+          "region" : 4
+        },
+        {
+          "cod" : 1104,
+          "designation" : "Cadaval",
+          "district" : 11,
+          "region" : 2
+        },
+        {
+          "cod" : 1105,
+          "designation" : "Cascais",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1106,
+          "designation" : "Lisboa",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1107,
+          "designation" : "Loures",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1108,
+          "designation" : "Lourinhã",
+          "district" : 11,
+          "region" : 2
+        },
+        {
+          "cod" : 1109,
+          "designation" : "Mafra",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1110,
+          "designation" : "Oeiras",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1111,
+          "designation" : "Sintra",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1112,
+          "designation" : "Sobral de Monte Agraço",
+          "district" : 11,
+          "region" : 2
+        },
+        {
+          "cod" : 1113,
+          "designation" : "Torres Vedras",
+          "district" : 11,
+          "region" : 2
+        },
+        {
+          "cod" : 1114,
+          "designation" : "Vila Franca de Xira",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1115,
+          "designation" : "Amadora",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1116,
+          "designation" : "Odivelas",
+          "district" : 11,
+          "region" : 3
+        },
+        {
+          "cod" : 1201,
+          "designation" : "Alter do Chão",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1202,
+          "designation" : "Arronches",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1203,
+          "designation" : "Avis",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1204,
+          "designation" : "Campo Maior",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1205,
+          "designation" : "Castelo de Vide",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1206,
+          "designation" : "Crato",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1207,
+          "designation" : "Elvas",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1208,
+          "designation" : "Fronteira",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1209,
+          "designation" : "Gavião",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1210,
+          "designation" : "Marvão",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1211,
+          "designation" : "Monforte",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1212,
+          "designation" : "Nisa",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1213,
+          "designation" : "Ponte de Sor",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1214,
+          "designation" : "Portalegre",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1215,
+          "designation" : "Sousel",
+          "district" : 12,
+          "region" : 4
+        },
+        {
+          "cod" : 1301,
+          "designation" : "Amarante",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1302,
+          "designation" : "Baião",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1303,
+          "designation" : "Felgueiras",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1304,
+          "designation" : "Gondomar",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1305,
+          "designation" : "Lousada",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1306,
+          "designation" : "Maia",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1307,
+          "designation" : "Marco de Canaveses",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1308,
+          "designation" : "Matosinhos",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1309,
+          "designation" : "Paços de Ferreira",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1310,
+          "designation" : "Paredes",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1311,
+          "designation" : "Penafiel",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1312,
+          "designation" : "Porto",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1313,
+          "designation" : "Póvoa de Varzim",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1314,
+          "designation" : "Santo Tirso",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1315,
+          "designation" : "Valongo",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1316,
+          "designation" : "Vila do Conde",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1317,
+          "designation" : "Vila Nova de Gaia",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1318,
+          "designation" : "Trofa",
+          "district" : 13,
+          "region" : 1
+        },
+        {
+          "cod" : 1420,
+          "designation" : "Vila Nova da Barquinha",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1421,
+          "designation" : "Ourém",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1401,
+          "designation" : "Abrantes",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1402,
+          "designation" : "Alcanena",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1403,
+          "designation" : "Almeirim",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1404,
+          "designation" : "Alpiarça",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1405,
+          "designation" : "Benavente",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1406,
+          "designation" : "Cartaxo",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1407,
+          "designation" : "Chamusca",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1408,
+          "designation" : "Constancia",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1409,
+          "designation" : "Coruche",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1410,
+          "designation" : "Entroncamento",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1411,
+          "designation" : "Ferreira do Zezere",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1412,
+          "designation" : "Golegã",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1413,
+          "designation" : "Mação",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1414,
+          "designation" : "Rio Maior",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1415,
+          "designation" : "Salvaterra de Magos",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1416,
+          "designation" : "Santarém",
+          "district" : 14,
+          "region" : 4
+        },
+        {
+          "cod" : 1417,
+          "designation" : "Sardoal",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1418,
+          "designation" : "Tomar",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1419,
+          "designation" : "Torres Novas",
+          "district" : 14,
+          "region" : 2
+        },
+        {
+          "cod" : 1501,
+          "designation" : "Alcácer do Sal",
+          "district" : 15,
+          "region" : 4
+        },
+        {
+          "cod" : 1502,
+          "designation" : "Alcochete",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1503,
+          "designation" : "Almada",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1504,
+          "designation" : "Barreiro",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1505,
+          "designation" : "Grandola",
+          "district" : 15,
+          "region" : 4
+        },
+        {
+          "cod" : 1506,
+          "designation" : "Moita",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1507,
+          "designation" : "Montijo",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1508,
+          "designation" : "Palmela",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1510,
+          "designation" : "Seixal",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1511,
+          "designation" : "Sesimbra",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1512,
+          "designation" : "Setúbal",
+          "district" : 15,
+          "region" : 3
+        },
+        {
+          "cod" : 1513,
+          "designation" : "Sines",
+          "district" : 15,
+          "region" : 4
+        },
+        {
+          "cod" : 1509,
+          "designation" : "Santiago do Cacém",
+          "district" : 15,
+          "region" : 4
+        },
+        {
+          "cod" : 1601,
+          "designation" : "Arcos de Valdevez",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1602,
+          "designation" : "Caminha",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1603,
+          "designation" : "Melgaço",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1604,
+          "designation" : "Monção",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1605,
+          "designation" : "Paredes de Coura",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1606,
+          "designation" : "Ponte da Barca",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1607,
+          "designation" : "Ponte de Lima",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1608,
+          "designation" : "Valença",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1609,
+          "designation" : "Viana do Castelo",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1610,
+          "designation" : "Vila Nova de Cerveira",
+          "district" : 16,
+          "region" : 1
+        },
+        {
+          "cod" : 1701,
+          "designation" : "Alijó",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1702,
+          "designation" : "Boticas",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1703,
+          "designation" : "Chaves",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1704,
+          "designation" : "Mesão Frio",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1705,
+          "designation" : "Mondim de Basto",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1706,
+          "designation" : "Montalegre",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1707,
+          "designation" : "Murça",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1708,
+          "designation" : "Peso da Régua",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1709,
+          "designation" : "Ribeira de Pena",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1710,
+          "designation" : "Sabrosa",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1711,
+          "designation" : "Sta Marta de Penaguião",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1712,
+          "designation" : "Valpaços",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1713,
+          "designation" : "Vila Pouca de Aguiar",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1714,
+          "designation" : "Vila Real",
+          "district" : 17,
+          "region" : 1
+        },
+        {
+          "cod" : 1801,
+          "designation" : "Armamar",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1802,
+          "designation" : "Carregal do Sal",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1803,
+          "designation" : "Castro Daire",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1804,
+          "designation" : "Cinfães",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1805,
+          "designation" : "Lamego",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1806,
+          "designation" : "Mangualde",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1807,
+          "designation" : "Moimenta da Beira",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1808,
+          "designation" : "Mortágua",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1809,
+          "designation" : "Nelas",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1810,
+          "designation" : "Oliveira de Frades",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1811,
+          "designation" : "Penalva do Castelo",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1812,
+          "designation" : "Penedono",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1813,
+          "designation" : "Resende",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1814,
+          "designation" : "Santa Comba Dão",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1815,
+          "designation" : "São João da Pesqueira",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1816,
+          "designation" : "São Pedro do Sul",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1817,
+          "designation" : "Satão",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1818,
+          "designation" : "Sernancelhe",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1819,
+          "designation" : "Tabuaço",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1820,
+          "designation" : "Tarouca",
+          "district" : 18,
+          "region" : 1
+        },
+        {
+          "cod" : 1821,
+          "designation" : "Tondela",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1822,
+          "designation" : "Vila Nova de Paiva",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1823,
+          "designation" : "Viseu",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 1824,
+          "designation" : "Vouzela",
+          "district" : 18,
+          "region" : 2
+        },
+        {
+          "cod" : 4101,
+          "designation" : "Vila do Porto",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4201,
+          "designation" : "Lagoa",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4202,
+          "designation" : "Nordeste",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4203,
+          "designation" : "Ponta Delgada",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4204,
+          "designation" : "Povoação",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4205,
+          "designation" : "Ribeira Grande",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4206,
+          "designation" : "Vila Franca do Campo",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4301,
+          "designation" : "Angra do Heroismo",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4302,
+          "designation" : "Praia da Vitória",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4401,
+          "designation" : "Santa Cruz da Graciosa",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4501,
+          "designation" : "Calheta",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4502,
+          "designation" : "Velas",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4601,
+          "designation" : "Lajes do Pico",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4602,
+          "designation" : "Madalena",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4603,
+          "designation" : "São Roque do Pico",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4701,
+          "designation" : "Horta",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4801,
+          "designation" : "Lajes das Flores",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4802,
+          "designation" : "Santa Cruz das Flores",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 4901,
+          "designation" : "Corvo",
+          "district" : 40,
+          "region" : 6
+        },
+        {
+          "cod" : 3108,
+          "designation" : "Santa Cruz",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3109,
+          "designation" : "Santana",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3110,
+          "designation" : "São Vicente",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3201,
+          "designation" : "Porto Santo",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3101,
+          "designation" : "Calheta",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3102,
+          "designation" : "Câmara de Lobos",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3103,
+          "designation" : "Funchal",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3104,
+          "designation" : "Machico",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3105,
+          "designation" : "Ponta do Sol",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3106,
+          "designation" : "Porto Moniz",
+          "district" : 30,
+          "region" : 7
+        },
+        {
+          "cod" : 3107,
+          "designation" : "Ribeira Brava",
+          "district" : 30,
+          "region" : 7
+        }
+      ]
+    }
+  ]
+}

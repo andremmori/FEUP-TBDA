@@ -1,0 +1,90 @@
+{
+  "results" : [
+    {
+      "columns" : [
+        {
+          "name" : "ROOMTYPE",
+          "type" : "NUMBER"
+        },
+        {
+          "name" : "DESCRIPTION",
+          "type" : "VARCHAR2"
+        }
+      ],
+      "items" : [
+        {
+          "roomtype" : 1,
+          "description" : "Teatro"
+        },
+        {
+          "roomtype" : 2,
+          "description" : "Café concerto"
+        },
+        {
+          "roomtype" : 3,
+          "description" : "Sala de associação recreativa e cultural"
+        },
+        {
+          "roomtype" : 4,
+          "description" : "Coliseu"
+        },
+        {
+          "roomtype" : 5,
+          "description" : "Teatro estúdio"
+        },
+        {
+          "roomtype" : 6,
+          "description" : "Auditório cinema"
+        },
+        {
+          "roomtype" : 7,
+          "description" : "Auditório"
+        },
+        {
+          "roomtype" : 8,
+          "description" : "Outras salas de espetáculo"
+        },
+        {
+          "roomtype" : 9,
+          "description" : "Casa de fado"
+        },
+        {
+          "roomtype" : 10,
+          "description" : "Anfiteatro ao ar livre"
+        },
+        {
+          "roomtype" : 11,
+          "description" : "Praça de touros multiusos"
+        },
+        {
+          "roomtype" : 12,
+          "description" : "Recinto multiusos"
+        },
+        {
+          "roomtype" : 13,
+          "description" : "Cinema ao ar livre"
+        },
+        {
+          "roomtype" : 14,
+          "description" : "Cine-Teatro"
+        },
+        {
+          "roomtype" : 15,
+          "description" : "Cinema"
+        },
+        {
+          "roomtype" : 16,
+          "description" : "Sala de espetáculo de casino"
+        },
+        {
+          "roomtype" : 17,
+          "description" : "Cinema isolado"
+        },
+        {
+          "roomtype" : 18,
+          "description" : "Praça de touros"
+        }
+      ]
+    }
+  ]
+}

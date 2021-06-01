@@ -14,7 +14,7 @@ def parse_data(table_name: str):
 def main():
     # Parse db server data from .env
     db_server = 'mongodb://{}@{}'.format(os.getenv('DB_AUTH'),
-                                        os.getenv('DB_HOST'))
+                                        os.getenv('DB_SERVER'))
     # Init client and DB
     client = MongoClient(db_server)
     db = client['tbdg']

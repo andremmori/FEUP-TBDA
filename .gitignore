@@ -80,4 +80,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Python
+.env
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,vscode,linux

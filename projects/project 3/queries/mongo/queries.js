@@ -23,8 +23,8 @@ db.facilities.aggregate([
     {
         $group:
         {
-            _id: "$municipality.region.designation",
-            n_facilities: { $sum: 1 }
+            "_id": "$municipality.region.designation",
+            "n_facilities": { $sum: 1 }
         }
     }
 ]);
@@ -38,8 +38,8 @@ db.municipalities.count() - db.facilities.aggregate(
     },
     {
         $group: {
-            _id: "$municipality.designation",
-            n_facilities: { $sum: 1 }
+            "_id": "$municipality.designation",
+            "n_facilities": { $sum: 1 }
         }
     }
 ).toArray().length;
@@ -88,8 +88,8 @@ db.municipalities.aggregate([
     {
         $group:
         {
-            _id: { _id: "$district._id", designation: "$district.designation" },
-            municipalities: { $push: { nome: "$designation", hasFacilities: {
+            "_id": { _id: "$district._id", designation: "$district.designation" },
+            "municipalities": { $push: { "nome": "$designation", "hasFacilities": {
                 $gt: [{ $size: "$facilities" }, 0]
             } } }
         },
@@ -98,6 +98,6 @@ db.municipalities.aggregate([
         $match: { "municipalities": { "$not": { "$elemMatch": { "hasFacilities": false } } } }
     },
     {
-        $group: { _id: "$_id._id", designation: { $first: "$_id.designation" } }
+        $group: { "_id": "$_id._id", "designation": { $first: "$_id.designation" } }
     }
 ]);

@@ -26,4 +26,4 @@ To run the script, open a terminal tab at the [model/mongodb/](model/mongodb/) f
 python populate.py
 ```
 
-It will open the MongoDB database with the group/password and server provided in the [.env](model/mongodb/.env) file and add the collections created using the data exported from the SQL Developer server, found in the [data/]model/(mongodb/data) folder.
+It will open the MongoDB database with the group/password and server provided in the [model/mongodb/.env](model/mongodb/.env) file and add the collections created using the data exported from the SQL Developer server, found in the [model/mongodb/data/](model/mongodb/data) folder.

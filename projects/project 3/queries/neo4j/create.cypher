@@ -1,0 +1,40 @@
+// Drop all
+MATCH (n)
+DETACH DELETE n;
+
+// Region
+DROP CONSTRAINT UniqueRegion;
+CREATE CONSTRAINT UniqueRegion ON (r:Regions) ASSERT r.COD IS UNIQUE;
+LOAD CSV WITH HEADERS FROM 'file:///REGIONS_DATA.csv' AS row
+WITH toInteger(row.COD) AS COD, row.DESIGNATION AS DESIGNATION, row.NUT1 as NUT1
+MERGE (r:Regions {COD: COD})
+  SET r.DESIGNATION = DESIGNATION
+  SET r.NUT1 = NUT1
+RETURN count(r);
+
+// District
+DROP CONSTRAINT UniqueDistrict;
+CREATE CONSTRAINT UniqueDistrict ON (d:Districts) ASSERT d.COD IS UNIQUE;
+LOAD CSV WITH HEADERS FROM 'file:///DISTRICTS_DATA.csv' AS row
+WITH toInteger(row.COD) AS COD, row.DESIGNATION AS DESIGNATION, toInteger(row.REGION) as REGION
+MERGE (d:Districts {COD: COD})
+  SET d.DESIGNATION = DESIGNATION
+  SET d.REGION = REGION
+RETURN count(d);
+
+
+// DISTRICT_REGION
+MATCH (d:Districts)
+MATCH (r:Regions)
+WHERE d.REGION = r.COD
+CREATE (d)-[:DISTRICT_REGION]->(r);
+
+
+// Activities
+DROP CONSTRAINT UniqueActivity;
+CREATE CONSTRAINT UniqueActivity ON (a:Activities) ASSERT a.REF IS UNIQUE;
+LOAD CSV WITH HEADERS FROM 'file:///ACTIVITIES_DATA.csv' AS row
+WITH toInteger(row.REF) AS REF, row.ACTIVITY AS ACTIVITY
+MERGE (a:Activities {REF: REF})
+  SET a.ACTIVITY = ACTIVITY
+RETURN count(a);

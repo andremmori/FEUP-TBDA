@@ -20,7 +20,8 @@ def main():
     db = client['tbdg']
 
     # Drop collections
-    db.facilities.drop()
+    db['facilities'].drop()
+    db['municipalities'].drop()
 
     # Parse exported data from SQL db
     activities = parse_data('ACTIVITIES')
@@ -82,6 +83,7 @@ def main():
 
     # Insert data into MongoDB
     db['facilities'].insert_many(facilities)
+    db['municipalities'].insert_many(municipalities)
 
 
 if __name__ == "__main__":

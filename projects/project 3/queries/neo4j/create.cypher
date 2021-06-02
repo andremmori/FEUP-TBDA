@@ -3,38 +3,51 @@ MATCH (n)
 DETACH DELETE n;
 
 // Region
-DROP CONSTRAINT UniqueRegion;
-CREATE CONSTRAINT UniqueRegion ON (r:Regions) ASSERT r.COD IS UNIQUE;
 LOAD CSV WITH HEADERS FROM 'file:///REGIONS_DATA.csv' AS row
-WITH toInteger(row.COD) AS COD, row.DESIGNATION AS DESIGNATION, row.NUT1 as NUT1
-MERGE (r:Regions {COD: COD})
-  SET r.DESIGNATION = DESIGNATION
-  SET r.NUT1 = NUT1
-RETURN count(r);
+CREATE (:Regions { COD: toInteger(row.COD), DESIGNATION: row.DESIGNATION, NUT1: row.NUT1});
 
 // District
-DROP CONSTRAINT UniqueDistrict;
-CREATE CONSTRAINT UniqueDistrict ON (d:Districts) ASSERT d.COD IS UNIQUE;
 LOAD CSV WITH HEADERS FROM 'file:///DISTRICTS_DATA.csv' AS row
-WITH toInteger(row.COD) AS COD, row.DESIGNATION AS DESIGNATION, toInteger(row.REGION) as REGION
-MERGE (d:Districts {COD: COD})
-  SET d.DESIGNATION = DESIGNATION
-  SET d.REGION = REGION
-RETURN count(d);
+CREATE (d:Districts { COD: toInteger(row.COD), DESIGNATION: row.DESIGNATION, REGION: toInteger(row.REGION)});
 
-
-// DISTRICT_REGION
-MATCH (d:Districts)
-MATCH (r:Regions)
-WHERE d.REGION = r.COD
+// DISTRICT_REGION Relation
+MATCH ( d:Districts)
+MATCH ( r:Regions { COD : toInteger(d.REGION)})
 CREATE (d)-[:DISTRICT_REGION]->(r);
 
+// Municipalities
+LOAD CSV WITH HEADERS FROM 'file:///MUNICIPALITIES_DATA.csv' AS row
+CREATE (:Municipalities { COD: toInteger(row.COD), DESIGNATION: row.DESIGNATION, DISTRICT: toInteger(row.DISTRICT), REGION: toInteger(row.REGION)});
+
+// MUNICIPALITY_DISTRICT
+MATCH (m:Municipalities)
+MATCH (d:Districts { COD : toInteger(m.DISTRICT)})
+CREATE (m)-[:MUNICIPALITY_DISTRICT]->(d);
+
+// MUNICIPALITY_REGION
+// MATCH (m:Municipalities)
+// MATCH (r:Regions { COD : toInteger(m.REGION)})
+// CREATE (m)-[:MUNICIPALITY_REGION]->(r);
+
+// Facilities
+LOAD CSV WITH HEADERS FROM 'file:///FACILITIES_DATA.csv' AS row
+CREATE (:Facilities { ID: toInteger(row.ID), NAME: row.NAME, CAPACITY: toInteger(row.CAPACITY), ROOMTYPE: toInteger(row.ROOMTYPE), ADDRESS: row.ADDRESS, MUNICIPALITY: toInteger(row.MUNICIPALITY)});
+
+// Roomtypes
+LOAD CSV WITH HEADERS FROM 'file:///ROOMTYPES_DATA.csv' AS row
+CREATE (:Roomtypes { ROOMTYPE: toInteger(row.ROOMTYPE), DESCRIPTION: row.DESCRIPTION});
+
+// FACILITY_ROOMTYPE
+MATCH (f:Facilities)
+MATCH (rt: Roomtypes { ROOMTYPE: toInteger(f.ROOMTYPE)})
+CREATE (f)-[:FACILITY_ROOMTYPE]->(rt);
 
 // Activities
-DROP CONSTRAINT UniqueActivity;
-CREATE CONSTRAINT UniqueActivity ON (a:Activities) ASSERT a.REF IS UNIQUE;
 LOAD CSV WITH HEADERS FROM 'file:///ACTIVITIES_DATA.csv' AS row
-WITH toInteger(row.REF) AS REF, row.ACTIVITY AS ACTIVITY
-MERGE (a:Activities {REF: REF})
-  SET a.ACTIVITY = ACTIVITY
-RETURN count(a);
+CREATE (:Activities { REF: toInteger(row.REF), ACTIVITY: row.ACTIVITY});
+
+// FACILITY_ACTIVITY
+LOAD CSV WITH HEADERS FROM 'file:///USES_DATA.csv' AS row
+MATCH (f:Facilities { ID: toInteger(row.ID)})
+MATCH (a:Activities { REF: toInteger(row.REF)})
+CREATE (f)-[:FACILITY_ACTIVITY]->(a);

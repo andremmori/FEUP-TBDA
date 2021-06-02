@@ -25,13 +25,18 @@ MATCH (d:Districts { COD : toInteger(m.DISTRICT)})
 CREATE (m)-[:MUNICIPALITY_DISTRICT]->(d);
 
 // MUNICIPALITY_REGION
-// MATCH (m:Municipalities)
-// MATCH (r:Regions { COD : toInteger(m.REGION)})
-// CREATE (m)-[:MUNICIPALITY_REGION]->(r);
+MATCH (m:Municipalities)
+MATCH (r:Regions { COD : toInteger(m.REGION)})
+CREATE (m)-[:MUNICIPALITY_REGION]->(r);
 
 // Facilities
 LOAD CSV WITH HEADERS FROM 'file:///FACILITIES_DATA.csv' AS row
 CREATE (:Facilities { ID: toInteger(row.ID), NAME: row.NAME, CAPACITY: toInteger(row.CAPACITY), ROOMTYPE: toInteger(row.ROOMTYPE), ADDRESS: row.ADDRESS, MUNICIPALITY: toInteger(row.MUNICIPALITY)});
+
+// FACILITY_MUNICIPALITY
+MATCH (f:Facilities)
+MATCH (m:Municipalities { COD: f.MUNICIPALITY})
+CREATE (f)-[:FACILITY_MUNICIPALITY]->(m);
 
 // Roomtypes
 LOAD CSV WITH HEADERS FROM 'file:///ROOMTYPES_DATA.csv' AS row

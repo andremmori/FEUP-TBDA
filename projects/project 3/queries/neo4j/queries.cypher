@@ -19,12 +19,13 @@ WITH COUNT(DISTINCT m.COD) AS municipalitiesWithCinema
 MATCH (totalMunicipalities:Municipalities)
 RETURN COUNT(totalMunicipalities) - municipalitiesWithCinema AS Total;
 
-// D (incomplete)
+// D
 MATCH (f:Facilities)-[:FACILITY_ACTIVITY]->(a:Activities)
 MATCH (f)-[:FACILITY_MUNICIPALITY]->(m:Municipalities)
 WITH m.DESIGNATION as DESIGNATION, a.ACTIVITY AS ACTIVITY,  COUNT(a) AS TOTAL
-ORDER BY TOTAL DESC
-RETURN ACTIVITY, MAX(TOTAL);
+WITH COLLECT({municipality: DESIGNATION, activity: ACTIVITY, total: TOTAL}) AS ROWS, MAX(TOTAL) AS MAX, ACTIVITY as activity
+UNWIND [ROW IN ROWS WHERE ROW.activity = activity AND ROW.total = MAX] AS ROW
+RETURN  ROW.activity AS ACTIVITY, ROW.municipality AS MUNICIPALITY, ROW.total AS N_FACILITIES;
 
 // E
 MATCH (m)-[:MUNICIPALITY_DISTRICT]-(d:Districts)

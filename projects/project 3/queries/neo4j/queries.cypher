@@ -37,3 +37,11 @@ WITH COLLECT(DISTINCT District) AS withoutAllFacilities, COLLECT(DISTINCT d) AS 
 WITH [n IN allDistricts WHERE NOT n IN withoutAllFacilities] AS withAllFacilities
 UNWIND withAllFacilities as resDistricts
 RETURN resDistricts.COD AS COD, resDistricts.DESIGNATION AS DESIGNATION;
+
+// F
+MATCH (f:Facilities)-[:FACILITY_ACTIVITY]->(a:Activities)
+MATCH (f)-[:FACILITY_MUNICIPALITY]->(m:Municipalities)
+MATCH (m)-[:MUNICIPALITY_DISTRICT]->(d:Districts)
+WITH d AS d, m.COD AS m, COUNT(distinct f.ID) AS diffFacilities, COUNT(a.REF) AS activities
+RETURN d.COD AS COD, d.DESIGNATION AS DESIGNATION, AVG(activities/diffFacilities) AS avgActivitiesPerFacility
+ORDER BY COD;

@@ -101,3 +101,35 @@ db.municipalities.aggregate([
         $group: { "_id": "$_id._id", "designation": { $first: "$_id.designation" } }
     }
 ]);
+
+// F
+db.facilities.aggregate([
+    {
+        $group:
+        {
+            "_id": "$municipality.district._id",
+            "designation": { $first: "$municipality.district.designation" },
+            "capacity": { $avg: "$capacity" }
+        }
+    },
+    {
+        $addFields:
+        {
+            "avg": {
+                $divide: [{
+                    $subtract: [{ $multiply: ['$capacity', 100] },
+                    { $mod: [{ $multiply: ['$capacity', 100] }, 1] }]
+                }, 100]
+            }
+        }
+    },
+    {
+        $group:
+        {
+            "_id": "$_id",
+            "designation": { $first: "$designation" },
+            "avgCapacityPerDistrict": { $first: "$avg" }
+        }
+    },
+    { $sort: { "_id": 1 } },
+]);

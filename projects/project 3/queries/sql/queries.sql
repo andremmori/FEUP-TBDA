@@ -62,3 +62,9 @@ FROM municipalities INNER JOIN districts ON municipalities.district = districts.
 LEFT OUTER JOIN facilities on facilities.municipality = municipalities.cod
 WHERE id is null
 );
+
+-- 7
+SELECT d.cod,d.designation, ROUND(AVG(f.capacity),2) AS Avg_Cap_Per_District
+FROM districts d, municipalities m, facilities f
+WHERE m.district = d.cod AND f.municipality = m.cod
+GROUP BY d.cod,d.designation;

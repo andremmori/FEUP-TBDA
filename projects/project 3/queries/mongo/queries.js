@@ -44,7 +44,7 @@ db.municipalities.count() - db.facilities.aggregate(
     }
 ).toArray().length;
 
-// 4
+// D
 db.facilities.aggregate([
     {
         $unwind: "$activities"
